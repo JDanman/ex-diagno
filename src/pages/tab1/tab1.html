@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>
+      Llamadas
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let rebelde of rebeldes"
+        (tap)="verDetalles(rebelde)">
+      <ion-avatar item-start>
+        <img [src]="rebelde.img">
+      </ion-avatar>
+      <h2> {{ rebelde.nombre }} </h2>
+      <p> {{ rebelde.titulo }}</p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
